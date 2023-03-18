@@ -6,9 +6,9 @@ import matplotlib.cm as cm
 import numpy as np
 import pandas as pd
 import os
-import cv2
+#import cv2
 import math
-from google.colab.patches import cv2_imshow
+#from google.colab.patches import cv2_imshow
 from time import sleep
 
 df = pd.read_csv("Demand_History.csv")
@@ -27,7 +27,7 @@ for i, _ in enumerate(years):
 
 """The code below created the demand video. Basically the saved plots are being added to the video"""
 
-image_folder = "."
+"""image_folder = "."
 video_name = "Demand Evolution.mp4"
 
 images = [img for img in os.listdir(image_folder)
@@ -47,7 +47,7 @@ for image in images:
   #cv2_imshow(frame)
   video.write(frame) 
   
-video.release()  # releasing the video generated
+video.release()  # releasing the video generated"""
 
 coordinates = (df.x_coordinate[0], df.y_coordinate[0])
 plt.figure(figsize=(17,17))
@@ -72,3 +72,4 @@ demand = df[y]
 print(demand)
 
 plt.plot(demand_point_index, demand)
+#hi this is sanaka
